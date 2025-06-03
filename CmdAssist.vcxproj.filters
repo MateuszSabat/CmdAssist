@@ -32,6 +32,9 @@
     <ClInclude Include="CommandParameter.h">
       <Filter>Headers</Filter>
     </ClInclude>
+    <ClInclude Include="Config.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CmdAssist.cpp">
@@ -50,6 +53,9 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="CommandParameter.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Config.cpp">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>

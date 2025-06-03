@@ -132,6 +132,7 @@
     <ClInclude Include="Command.h" />
     <ClInclude Include="Commandlet.h" />
     <ClInclude Include="CommandParameter.h" />
+    <ClInclude Include="Config.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="StringUtils.h" />
   </ItemGroup>
@@ -141,6 +142,7 @@
     <ClCompile Include="Command.cpp" />
     <ClCompile Include="Commandlet.cpp" />
     <ClCompile Include="CommandParameter.cpp" />
+    <ClCompile Include="Config.cpp" />
     <ClCompile Include="StringUtils.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,6 +1,7 @@
 ﻿#include "framework.h"
 #include "CmdAssist.h"
 #include "Commandlet.h"
+#include "Config.h"
 
 #pragma comment(lib, "dwmapi.lib")
 
@@ -8,7 +9,8 @@
 
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPWSTR lpCmdLine, _In_ int nCmdShow)
 {
-    RegisterHotKey(NULL, HOTKEY_ID, MOD_ALT, 0x51); // alt + Q
+    Config config("config");
+    RegisterHotKey(NULL, HOTKEY_ID, config.HotkeyModifiers, config.HotkeyKey);
 
     Commandlet commandlet(hInstance);
     MSG msg;

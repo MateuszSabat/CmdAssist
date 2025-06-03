@@ -3,7 +3,6 @@
 #include "framework.h"
 #include <fstream>
 #include <sstream>
-#include <filesystem>
 #include "Command.h"
 #include "CommandParameter.h"
 
@@ -27,8 +26,16 @@ std::string Assistant::Execute(const std::string& cmd)
 	else if (cmd == "config")
 	{
 		char fullPath[MAX_PATH];
+		GetFullPathNameA("config", MAX_PATH, fullPath, NULL);
+		BatCommand cmd("config", "code \"" + std::string(fullPath) + '"', false);
+		cmd.Execute("");
+		return "";
+	}
+	else if (cmd == "commands")
+	{
+		char fullPath[MAX_PATH];
 		GetFullPathNameA("commands", MAX_PATH, fullPath, NULL);
-		BatCommand cmd("Config", "code \"" + std::string(fullPath) + '"', false);
+		BatCommand cmd("commands", "code \"" + std::string(fullPath) + '"', false);
 		cmd.Execute("");
 		return "";
 	}
